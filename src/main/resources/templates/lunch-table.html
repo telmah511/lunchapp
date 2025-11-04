@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunch App - Lunch Table</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex h-screen">
+    <nav class="w-64 bg-gray-800 text-white p-4">
+        <h2 class="text-xl font-bold mb-4">Lunch App</h2>
+        <ul>
+            <li class="mb-2">
+                <a href="/" class="block py-2 px-4 rounded hover:bg-gray-700">Select Lunch</a>
+            </li>
+            <li>
+                <a href="/lunch-table" class="block py-2 px-4 rounded hover:bg-gray-700">Lunch Table</a>
+            </li>
+        </ul>
+    </nav>
+    <main class="flex-1 p-8">
+        <h1 class="text-3xl font-bold mb-6">Lunch Table</h1>
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-white border border-gray-300">
+                <thead>
+                    <tr class="bg-gray-100">
+                        <th class="py-2 px-4 border-b text-left">Staff</th>
+                        <th class="py-2 px-4 border-b text-left">Monday</th>
+                        <th class="py-2 px-4 border-b text-left">Tuesday</th>
+                        <th class="py-2 px-4 border-b text-left">Wednesday</th>
+                        <th class="py-2 px-4 border-b text-left">Thursday</th>
+                        <th class="py-2 px-4 border-b text-left">Friday</th>
+                    </tr>
+                </thead>
+                <tbody th:each="employee : ${employees}">
+                    <tr>
+                        <td class="py-2 px-4 border-b" th:text="${employee.name}">Employee Name</td>
+                        <td class="py-2 px-4 border-b" th:text="${employee.mondayLunch}">Monday Lunch</td>
+                        <td class="py-2 px-4 border-b" th:text="${employee.tuesdayLunch}">Tuesday Lunch</td>
+                        <td class="py-2 px-4 border-b" th:text="${employee.wednesdayLunch}">Wednesday Lunch</td>
+                        <td class="py-2 px-4 border-b" th:text="${employee.thursdayLunch}">Thursday Lunch</td>
+                        <td class="py-2 px-4 border-b" th:text="${employee.fridayLunch}">Friday Lunch</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+</html>

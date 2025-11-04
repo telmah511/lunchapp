@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunch App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex h-screen">
+    <nav class="w-64 bg-gray-800 text-white p-4">
+        <h2 class="text-xl font-bold mb-4">Lunch App</h2>
+        <ul>
+            <li class="mb-2">
+                <a href="/" class="block py-2 px-4 rounded hover:bg-gray-700">Select Lunch</a>
+            </li>
+            <li>
+                <a href="/lunch-table" class="block py-2 px-4 rounded hover:bg-gray-700">Lunch Table</a>
+            </li>
+        </ul>
+    </nav>
+    <main class="flex-1 p-8">
+        <h1 class="text-3xl font-bold mb-6">Select Lunch</h1>
+        <form class="space-y-6">
+            <div>
+                <label class="block text-lg font-semibold mb-2">Monday</label>
+                <div class="space-y-2">
+                    <label class="flex items-center">
+                        <input type="radio" name="monday" value="jollof-rice" class="mr-2">
+                        Jollof Rice
+                    </label>
+                    <label class="flex items-center">
+                        <input type="radio" name="monday" value="banku-tilapia" class="mr-2">
+                        Banku with Tilapia
+                    </label>
+                </div>
+            </div>
+            <div>
+                <label class="block text-lg font-semibold mb-2">Tuesday</label>
+                <div class="space-y-2">
+                    <label class="flex items-center">
+                        <input type="radio" name="tuesday" value="waakye" class="mr-2">
+                        Waakye
+                    </label>
+                    <label class="flex items-center">
+                        <input type="radio" name="tuesday" value="fufu-light-soup" class="mr-2">
+                        Fufu with Light Soup
+                    </label>
+                </div>
+            </div>
+            <div>
+                <label class="block text-lg font-semibold mb-2">Wednesday</label>
+                <div class="space-y-2">
+                    <label class="flex items-center">
+                        <input type="radio" name="wednesday" value="kelewele" class="mr-2">
+                        Kelewele
+                    </label>
+                    <label class="flex items-center">
+                        <input type="radio" name="wednesday" value="red-red" class="mr-2">
+                        Red Red
+                    </label>
+                </div>
+            </div>
+            <div>
+                <label class="block text-lg font-semibold mb-2">Thursday</label>
+                <div class="space-y-2">
+                    <label class="flex items-center">
+                        <input type="radio" name="thursday" value="ampesi-palava" class="mr-2">
+                        Ampesi with Palava Sauce
+                    </label>
+                    <label class="flex items-center">
+                        <input type="radio" name="thursday" value="fried-rice" class="mr-2">
+                        Fried Rice
+                    </label>
+                </div>
+            </div>
+            <div>
+                <label class="block text-lg font-semibold mb-2">Friday</label>
+                <div class="space-y-2">
+                    <label class="flex items-center">
+                        <input type="radio" name="friday" value="banku-okro-stew" class="mr-2">
+                        Banku with Okro Stew
+                    </label>
+                    <label class="flex items-center">
+                        <input type="radio" name="friday" value="tatale" class="mr-2">
+                        Tatale
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Submit Selection
+            </button>
+        </form>
+    </main>
+</body>
+</html>
