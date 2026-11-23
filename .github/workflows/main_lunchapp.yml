@@ -6,7 +6,7 @@ name: Build and deploy JAR app to Azure Web App - lunchapp
 on:
   push:
     branches:
-      - main
+      - 'main'
   workflow_dispatch:
 
 jobs:
@@ -49,9 +49,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_D7E496DF56044C108435A768073A0070 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_5EE1C72E74B9400693D5E0B18B9B7286 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_D85EBA6419114AF0B294BC67348391B0 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_0CC644A18FFA48A4B8AAD3010450D5BB }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_CE2FE65FFE6946EB98E3C1FA55BC2E0C }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_264CC4F7485A4591BFF69694EAFD190D }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
